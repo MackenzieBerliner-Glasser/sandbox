@@ -1,4 +1,4 @@
-const { numberManipulator } = require('../hof');
+const { numberManipulator, repeater } = require('../hof');
 
 describe('testing all higher order functions', () => {
   it('doubles all items in an array', () => {
@@ -9,5 +9,12 @@ describe('testing all higher order functions', () => {
 
     expect(result).toEqual(expected);
 
+  });
+
+  it('gets called a number of times', () => {
+    const mock = jest.fn(() => console.log('hello'));
+    repeater(5, mock);
+    
+    expect(mock.mock.calls.length).toBe(5);
   });
 });
