@@ -5,5 +5,5 @@ describe('double', () => {
     const expected = 4;
     const result = double(2);
     expect(expected).toEqual(result);
-  })
+  });
 });
