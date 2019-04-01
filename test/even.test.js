@@ -1,4 +1,4 @@
-const { evens, firstEven, allEvens } = require('../even');
+const { evens, firstEven, allEvens, addEvens } = require('../even');
 
 describe('it tests even functionality', () => {
   it('returns only evens in arr', () => {
@@ -21,6 +21,14 @@ describe('it tests even functionality', () => {
     const arr = [2, 4, 8, 12];
     const expected = true;
     const result = allEvens(arr);
+
+    expect(result).toEqual(expected);
+  });
+
+  it('returns sum of all evens in array', () => {
+    const arr = [1, 2, 3, 6];
+    const expected = 8;
+    const result = addEvens(arr);
 
     expect(result).toEqual(expected);
   });
