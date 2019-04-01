@@ -4,6 +4,7 @@ describe('double', () => {
   it('returns a num doubled', () => {
     const expected = 4;
     const result = double(2);
+
     expect(result).toEqual(expected);
   });
 
@@ -11,6 +12,7 @@ describe('double', () => {
     const arr = [2, 3, 4];
     const expected = [4, 6, 8];
     const result = doubleArr(arr);
+    
     expect(result).toEqual(expected);
   });
 });
