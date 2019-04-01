@@ -5,6 +5,6 @@ describe('add array elements', () => {
     const arr = [1, 2, 3];
     const expected = 6;
     const result = addArr(arr);
-    expect(expected).toEqual(result);
+    expect(result).toEqual(expected);
   });
 });
