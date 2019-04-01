@@ -6,7 +6,16 @@ const repeater = (n, callback) => {
   }
 };
 
+let newArr = [];
+const map = (arr, callback) => {
+  arr.forEach(i => {
+    newArr.push(callback(i));
+  });
+  return newArr;
+};
+
 module.exports = {
   numberManipulator,
-  repeater
+  repeater,
+  map
 };
