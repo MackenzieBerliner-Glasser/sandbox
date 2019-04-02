@@ -1,4 +1,4 @@
-const { House } = require('../lib/house');
+const { House } = require('../lib/House');
 
 describe('testing for the house class', () => {
   const house = new House('123 elm st.', 4, 3, 6, '200,000');
