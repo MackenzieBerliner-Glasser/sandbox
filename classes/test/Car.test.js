@@ -9,4 +9,13 @@ describe('tests for the car class', () => {
     expect(car.color).toEqual('white');
     expect(car.miles).toEqual(0);
   });
+
+  it('has a drive method that increments the miles', () => {
+    const drivenMiles = 10;
+    expect(car.drive(drivenMiles)).toEqual(10);
+  });
+
+  it('has a static method makes that returns an array of possible makes', () => {
+    expect(Car.makes()).toEqual(['toyota', 'honda', 'mazda']);
+  });
 });

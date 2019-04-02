@@ -7,6 +7,15 @@ class Car {
     this.color = color;
     this.miles = miles;
   }
+
+  static makes() {
+    const makes = ['toyota', 'honda', 'mazda'];
+    return makes;
+  }
+
+  drive(drivenMiles) {
+    return (this.miles += drivenMiles);
+  }
 }
 
 module.exports = {
