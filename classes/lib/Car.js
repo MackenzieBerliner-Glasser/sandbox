@@ -1,6 +1,7 @@
 let miles = 0;
 class Car {
   constructor(make, model, year, color) {
+    if(!Car.makes().includes(make)) throw 'Invaid make';
     this.make = make;
     this.model = model;
     this.year = year;

@@ -18,4 +18,11 @@ describe('tests for the car class', () => {
   it('has a static method makes that returns an array of possible makes', () => {
     expect(Car.makes()).toEqual(['toyota', 'honda', 'mazda']);
   });
+
+  it('throws error when make doesnt match makes in static method', () => {
+    expect(() => {
+      //eslint-disable-next-line
+      const shitCar = new Car('ford');
+    }).toThrow();
+  });
 });
