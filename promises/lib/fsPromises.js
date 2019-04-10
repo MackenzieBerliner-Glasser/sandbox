@@ -8,3 +8,11 @@ fsPromises
   .writeFile('./test.text', 'hello world test', { encoding: 'utf8' })
   .then(console.log('finished'))
   .catch(err => console.log(err));
+
+fsPromises
+  .readFile('./promise.md', { encoding: 'utf8' })
+  .then(data => {
+    return fsPromises.writeFile('./promiseCopy.md', data, { encoding: 'utf8' });
+  })
+  .then(console.log('finished'))
+  .catch(err => console.log(err));
